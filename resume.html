@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudarshan Manikantan — Resume</title>
+<style>
+  :root{
+    --ink:#111;
+    --rule: rgba(17,17,17,0.25);
+    --muted:#444;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:#fff;
+    color:var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height:1.45;
+  }
+  .page{
+    max-width:800px;
+    margin:0 auto;
+    padding:48px 40px 80px;
+  }
+  h1{
+    font-size:28px;
+    margin:0 0 6px;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:10px;
+  }
+  .contact{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:4px 24px;
+    font-size:14px;
+    color:var(--muted);
+    border-bottom:2px solid var(--ink);
+    padding-bottom:14px;
+    margin-bottom:26px;
+  }
+  .contact a{ color:var(--muted); text-decoration:none; }
+  .contact a:hover{ text-decoration:underline; }
+
+  section{ margin-bottom:24px; }
+
+  .section-title{
+    font-variant:small-caps;
+    letter-spacing:0.04em;
+    font-size:15px;
+    font-weight:bold;
+    float:left;
+    width:150px;
+  }
+
+  .section-body{
+    margin-left:160px;
+  }
+
+  section::after{ content:""; display:table; clear:both; }
+
+  .entry{ margin-bottom:14px; }
+  .entry:last-child{ margin-bottom:0; }
+
+  .entry-head{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    font-weight:bold;
+    font-size:15px;
+  }
+  .entry-sub{
+    font-style:italic;
+    font-size:14px;
+    margin:2px 0 6px;
+  }
+  ul{ margin:6px 0 0; padding-left:20px; }
+  li{ font-size:14px; margin-bottom:4px; }
+  .desc{ font-size:14px; margin:2px 0 0; }
+  .links{ font-size:13px; margin-top:4px; }
+  .links a{ color:#1a4f8a; }
+
+  @media print{
+    body{ background:#fff; }
+    .page{ padding:0; max-width:none; }
+  }
+
+  @media (max-width:560px){
+    .section-title{ float:none; width:auto; margin-bottom:6px; }
+    .section-body{ margin-left:0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Sudarshan Manikantan</h1>
+  <div class="contact">
+    <span>[email]</span>
+    <span>[phone]</span>
+    <span><a href="[linkedin]">[linkedin]</a></span>
+    <span><a href="https://sudhirulz.github.io">sudhirulz.github.io</a></span>
+  </div>
+
+  <section>
+    <div class="section-title">Education</div>
+    <div class="section-body">
+      <div class="entry">
+        <div class="entry-head"><span>Dhirubhai Ambani International School, Mumbai</span><span>IBDP</span></div>
+        <div class="entry-sub">International Baccalaureate Diploma Programme</div>
+        <div class="desc">Research projects at the intersection of artificial intelligence, computational linguistics, mathematics, and cognitive science, including multilingual NLP, code&#8209;mixed language processing, and educational technologies.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Research Projects</div>
+    <div class="section-body">
+
+      <div class="entry">
+        <div class="entry-head"><span>Baku Languages Research</span></div>
+        <div class="entry-sub">Linguistics — Field Work</div>
+        <div class="desc">Field research into the CoMix language landscape of Baku and the surrounding regions of Azerbaijan.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/BakuLanguagesResearch" target="_blank" rel="noopener">github.com/sudhirulz/BakuLanguagesResearch</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>Baku Dataset</span></div>
+        <div class="entry-sub">Linguistics — Field Work</div>
+        <div class="desc">Underlying dataset for the Baku languages fieldwork.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/baku-dataset" target="_blank" rel="noopener">github.com/sudhirulz/baku-dataset</a> · <a href="https://sudhirulz.github.io/baku-dataset/" target="_blank" rel="noopener">live site</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>LinguaQuest</span></div>
+        <div class="entry-sub">Linguistics — Education</div>
+        <div class="desc">Problems and resources for preparing for the International Linguistics Olympiad.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/LinguaQuest" target="_blank" rel="noopener">github.com/sudhirulz/LinguaQuest</a> · <a href="https://sudhirulz.github.io/LinguaQuest/" target="_blank" rel="noopener">live site</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>All Tanglish Data</span></div>
+        <div class="entry-sub">Linguistics — Code&#8209;Mix Dataset</div>
+        <div class="desc">Tanglish (Tamil and English) code&#8209;mixed data, collected for downstream modelling work.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/All-Tanglish-Data" target="_blank" rel="noopener">github.com/sudhirulz/All-Tanglish-Data</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>ICM Prompting Comparison</span></div>
+        <div class="entry-sub">Linguistics — Comparing Models</div>
+        <div class="desc">Comparing ICM prompting against mBERT and CoMix on Tanglish (Tamil+English) code&#8209;mixed text.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/ICM-Prompting-Comparison-mBERT-and-CoMix-" target="_blank" rel="noopener">github.com/sudhirulz/ICM-Prompting-Comparison-mBERT-and-CoMix-</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>Zero-Shot Testing on CoMix and mBERT</span></div>
+        <div class="entry-sub">Linguistics — Comparing Models</div>
+        <div class="desc">Zero&#8209;shot evaluation runs comparing the CoMix and mBERT models on unseen code&#8209;mixed data.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/Zero-Shot-Testing-On-CoMix-and-mBERT" target="_blank" rel="noopener">github.com/sudhirulz/Zero-Shot-Testing-On-CoMix-and-mBERT</a></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>CoMix vs. mBERT vs. ICM</span></div>
+        <div class="entry-sub">Linguistics — Comparing Models</div>
+        <div class="desc">Consolidated results of CoMix, mBERT, and ICM testing on Tanglish data.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/CoMix-Comparison-on-Tanglish-Data-versus-mBERT-and-ICM" target="_blank" rel="noopener">github.com/sudhirulz/CoMix-Comparison-on-Tanglish-Data-versus-mBERT-and-ICM</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Other Projects</div>
+    <div class="section-body">
+      <div class="entry">
+        <div class="entry-head"><span>Debate Silent Round Result Finder</span></div>
+        <div class="entry-sub">Tool — Python</div>
+        <div class="desc">Guesses the results of silent rounds in debate competitions (WSDC/AP and BP formats) from a Calico Tab link.</div>
+        <div class="links"><a href="https://github.com/sudhirulz/Debate-Silent-Round-Result-Finder" target="_blank" rel="noopener">github.com/sudhirulz/Debate-Silent-Round-Result-Finder</a></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
