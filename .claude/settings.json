@@ -3,7 +3,21 @@
     "allow": [
       "Bash(python3 -m http.server 8791)",
       "Bash(curl -s http://localhost:8791/index.html)",
-      "Bash(pkill -f \"http.server 8791\")"
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(curl -sI \"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/605.1.15 \\(KHTML, like Gecko\\) Version/17.4 Safari/605.1.15\" \"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap\")",
+      "Bash(awk '/IBM Plex Sans/,/^}/' /tmp/fonts.css)",
+      "Bash(curl -sL -o fonts/ibm-plex-mono-400.woff2 \"https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2\")",
+      "Bash(curl -sL -o fonts/ibm-plex-mono-500.woff2 \"https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgsAXHNk.woff2\")",
+      "Bash(curl -sL -o fonts/ibm-plex-mono-600.woff2 \"https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgsAXHNk.woff2\")",
+      "Bash(curl -sL -o fonts/ibm-plex-sans-var.woff2 \"https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYbSB4Zh.woff2\")",
+      "Bash(curl -sL -o fonts/source-serif-4-var.woff2 \"https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gb8te1Xb7G.woff2\")",
+      "Bash(python3 -m http.server 8793)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8793/index.html)",
+      "Bash(pkill -f \"http.server 8793\")",
+      "Bash(python3 -m http.server 8794)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8794/index.html)",
+      "Bash(pkill -f \"http.server 8794\")"
     ]
   }
 }
