@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sudarshan Manikantan — IBDP student working on open-source research in AI, computational linguistics, mathematics, and cognitive science.">
 <title>Sudarshan Manikantan — field notebook</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231F7A70'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23F4FAFF' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 <style>
   @font-face{
     font-family:'Source Serif 4';
@@ -60,7 +62,9 @@
 
   body{
     margin:0;
-    background:var(--sky);
+    background:
+      radial-gradient(680px 380px at 88% -8%, var(--sky-deep), transparent 60%),
+      var(--sky);
     color:var(--ink);
     font-family:var(--font-sans);
     line-height:1.6;
@@ -94,9 +98,14 @@
     border-radius:50%;
     overflow:hidden;
     border:3px solid var(--card);
-    box-shadow:0 4px 18px rgba(28,43,58,0.18);
+    box-shadow:0 6px 24px rgba(28,43,58,0.22);
     opacity:0;
     animation:rise 0.6s ease-out forwards;
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .portrait:hover{
+    transform:translateY(-3px) rotate(-1deg);
+    box-shadow:0 10px 28px rgba(28,43,58,0.28);
   }
   .portrait img{
     width:100%; height:100%; object-fit:cover; display:block;
@@ -155,7 +164,7 @@
     letter-spacing:0.08em;
     text-transform:uppercase;
     color:var(--teal);
-    margin:0 0 4px;
+    margin:0 0 16px;
     display:flex;
     align-items:center;
     gap:10px;
@@ -168,14 +177,25 @@
   }
 
   .entry{
-    padding:32px 0;
-    border-bottom:1px solid var(--rule);
+    padding:24px;
+    margin-bottom:16px;
+    border-radius:16px;
+    background:var(--card);
+    border:1px solid var(--rule);
+    box-shadow:0 1px 2px rgba(28,43,58,0.04);
     display:grid;
-    grid-template-columns:150px 1fr;
-    gap:8px 28px;
+    grid-template-columns:130px 1fr;
+    gap:8px 24px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
 
-  .entry:last-child{ border-bottom:none; }
+  .entry:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 28px rgba(28,43,58,0.12);
+    border-color:rgba(31,122,112,0.35);
+  }
+
+  .entry:last-child{ margin-bottom:0; }
 
   .tag{
     font-family:var(--font-mono);
@@ -243,17 +263,22 @@
   .meta a:hover{ border-color:var(--teal); }
 
   @media (max-width: 560px){
-    .entry{ grid-template-columns:1fr; }
+    .entry{ grid-template-columns:1fr; padding:20px; }
     .tag{ padding-top:0; }
   }
 
   footer{
-    padding:40px 0 90px;
+    margin-top:12px;
+    padding:28px 24px;
+    border-radius:16px;
+    background:var(--card);
+    border:1px solid var(--rule);
     color:var(--slate);
     font-family:var(--font-mono);
     font-size:12px;
     display:flex;
     justify-content:space-between;
+    align-items:center;
     flex-wrap:wrap;
     gap:12px;
   }
@@ -332,7 +357,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/BakuLanguagesResearch" target="_blank" rel="noopener">Baku Languages Research</a></h2>
           <p class="desc">Field research into the CoMix language landscape of Baku and the surrounding regions of Azerbaijan.</p>
-          <div class="meta"><span><span class="lang-dot"></span>JavaScript</span> · <a href="https://github.com/sudhirulz/BakuLanguagesResearch" target="_blank" rel="noopener">view repo ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#D9A441"></span>JavaScript</span> · <a href="https://github.com/sudhirulz/BakuLanguagesResearch" target="_blank" rel="noopener">view repo ↗</a></div>
         </div>
       </article>
 
@@ -341,7 +366,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/baku-dataset" target="_blank" rel="noopener">Baku Dataset</a></h2>
           <p class="desc empty">Underlying dataset for the Baku languages fieldwork — no description yet.</p>
-          <div class="meta"><span><span class="lang-dot"></span>JavaScript</span> · <a href="https://github.com/sudhirulz/baku-dataset" target="_blank" rel="noopener">view repo ↗</a> · <a href="https://sudhirulz.github.io/baku-dataset/" target="_blank" rel="noopener">live ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#D9A441"></span>JavaScript</span> · <a href="https://github.com/sudhirulz/baku-dataset" target="_blank" rel="noopener">view repo ↗</a> · <a href="https://sudhirulz.github.io/baku-dataset/" target="_blank" rel="noopener">live ↗</a></div>
         </div>
       </article>
     </section>
@@ -354,7 +379,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/LinguaQuest" target="_blank" rel="noopener">LinguaQuest</a></h2>
           <p class="desc">Problems and resources for preparing for the International Linguistics Olympiad.</p>
-          <div class="meta"><span><span class="lang-dot"></span>HTML</span> · <a href="https://github.com/sudhirulz/LinguaQuest" target="_blank" rel="noopener">view repo ↗</a> · <a href="https://sudhirulz.github.io/LinguaQuest/" target="_blank" rel="noopener">live ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#C1573B"></span>HTML</span> · <a href="https://github.com/sudhirulz/LinguaQuest" target="_blank" rel="noopener">view repo ↗</a> · <a href="https://sudhirulz.github.io/LinguaQuest/" target="_blank" rel="noopener">live ↗</a></div>
         </div>
       </article>
     </section>
@@ -376,7 +401,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/ICM-Prompting-Comparison-mBERT-and-CoMix-" target="_blank" rel="noopener">ICM Prompting Comparison</a></h2>
           <p class="desc">Comparing ICM prompting against mBERT and CoMix on Tanglish (Tamil+English) code&#8209;mixed text.</p>
-          <div class="meta"><span><span class="lang-dot"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/ICM-Prompting-Comparison-mBERT-and-CoMix-" target="_blank" rel="noopener">view repo ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#D8722D"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/ICM-Prompting-Comparison-mBERT-and-CoMix-" target="_blank" rel="noopener">view repo ↗</a></div>
         </div>
       </article>
 
@@ -385,7 +410,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/Zero-Shot-Testing-On-CoMix-and-mBERT" target="_blank" rel="noopener">Zero-Shot Testing on CoMix and mBERT</a></h2>
           <p class="desc">Zero&#8209;shot evaluation runs comparing the CoMix and mBERT models on unseen code&#8209;mixed data.</p>
-          <div class="meta"><span><span class="lang-dot"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/Zero-Shot-Testing-On-CoMix-and-mBERT" target="_blank" rel="noopener">view repo ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#D8722D"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/Zero-Shot-Testing-On-CoMix-and-mBERT" target="_blank" rel="noopener">view repo ↗</a></div>
         </div>
       </article>
 
@@ -394,7 +419,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/CoMix-Comparison-on-Tanglish-Data-versus-mBERT-and-ICM" target="_blank" rel="noopener">CoMix vs. mBERT vs. ICM</a></h2>
           <p class="desc">Consolidated results of CoMix, mBERT, and ICM testing on Tanglish data.</p>
-          <div class="meta"><span><span class="lang-dot"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/CoMix-Comparison-on-Tanglish-Data-versus-mBERT-and-ICM" target="_blank" rel="noopener">view repo ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#D8722D"></span>Jupyter Notebook</span> · <a href="https://github.com/sudhirulz/CoMix-Comparison-on-Tanglish-Data-versus-mBERT-and-ICM" target="_blank" rel="noopener">view repo ↗</a></div>
         </div>
       </article>
     </section>
@@ -407,7 +432,7 @@
         <div class="entry-body">
           <h2><a href="https://github.com/sudhirulz/Debate-Silent-Round-Result-Finder" target="_blank" rel="noopener">Debate Silent Round Result Finder</a></h2>
           <p class="desc">Guesses the results of silent rounds in debate competitions (WSDC/AP and BP formats) from a Calico Tab link.</p>
-          <div class="meta"><span><span class="lang-dot"></span>Python</span> · <a href="https://github.com/sudhirulz/Debate-Silent-Round-Result-Finder" target="_blank" rel="noopener">view repo ↗</a></div>
+          <div class="meta"><span><span class="lang-dot" style="background:#3B6EA5"></span>Python</span> · <a href="https://github.com/sudhirulz/Debate-Silent-Round-Result-Finder" target="_blank" rel="noopener">view repo ↗</a></div>
         </div>
       </article>
     </section>
